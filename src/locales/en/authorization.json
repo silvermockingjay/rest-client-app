@@ -1,0 +1,9 @@
+{
+  "email": "Email",
+  "name": "Name",
+  "password": "Password",
+  "login": "Login",
+  "signUp": "Sign Up",
+  "loginTitle": "Login",
+  "signUpTitle": "Create account"
+}

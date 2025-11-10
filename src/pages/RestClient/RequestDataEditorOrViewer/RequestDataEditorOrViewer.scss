@@ -1,0 +1,77 @@
+@use '@/styles/base/variables';
+
+.data-container {
+  display: flex;
+  flex-direction: column;
+
+  .title-container {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+
+    .beautify {
+      margin-left: auto;
+    }
+  }
+
+  .content-container {
+    margin-top: 12px;
+    height: 300px;
+    border: 1px solid variables.$border-color;
+  }
+
+  .textarea {
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    border: none;
+    resize: none;
+  }
+
+  .viewer {
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: variables.$bg-color;
+
+    .status-code {
+      padding: 2px 4px;
+      width: fit-content;
+      min-width: 36px;
+      border-radius: variables.$border-radius;
+      border: 1px solid variables.$border-color;
+
+      &.info {
+        color: variables.$font-color-secondary;
+        border-color: variables.$font-color-secondary;
+      }
+
+      &.success {
+        color: variables.$color-success;
+        border-color: variables.$color-success;
+      }
+
+      &.error {
+        color: variables.$color-warning;
+        border-color: variables.$color-warning;
+      }
+    }
+
+    .body {
+      margin-top: 8px;
+    }
+  }
+
+  .viewer .error {
+    margin-top: 8px;
+    color: variables.$color-warning;
+  }
+
+  .not-valid-format {
+    height: 20px;
+    color: variables.$color-warning;
+    background-color: variables.$color-basic;
+  }
+}

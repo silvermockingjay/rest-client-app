@@ -1,0 +1,131 @@
+@use '@/styles/base/variables';
+
+.analytics-card {
+  display: flex;
+  flex-direction: column;
+
+  background: white;
+  padding: 40px;
+  border-radius: 4px;
+  width: 604px;
+
+  text-align: center;
+  position: relative;
+  box-shadow: variables.$shadow;
+  font-family: variables.$font-family-base, Arial, sans-serif;
+
+  .close-modal-bttn {
+    align-self: end;
+  }
+
+  .request-date-container {
+    display: flex;
+    gap: 2px;
+    align-items: center;
+  }
+  .endpoint-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin: 24px 0;
+
+    .method {
+      border: 1px solid;
+      border-radius: 4px;
+      padding: 4px 8px;
+      font-size: 12px;
+    }
+  }
+
+  .main-analytics-container {
+    display: flex;
+    gap: 40px;
+    padding: 40px 0;
+
+    .analytics-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 242px;
+      min-height: 144px;
+      padding: 20px 20px 32px;
+      gap: 12px;
+      background: #ffffff;
+      border-radius: 4px;
+      box-shadow: variables.$shadow;
+
+      h4 {
+        color: variables.$font-color-secondary;
+      }
+      .analytics-border {
+        box-sizing: border-box;
+        width: 202px;
+        height: 1px;
+        border: 1px solid variables.$border-color;
+      }
+
+      .analytics-data {
+        display: flex;
+        flex-direction: column;
+        align-self: start;
+        gap: 12px;
+
+        div {
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          font-size: variables.$font-size-base;
+          span {
+            word-break: break-word;
+          }
+        }
+
+        .status-code-container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 40px;
+          height: 24px;
+          padding: 4px 8px;
+          font-size: 12px;
+          border: 1px solid variables.$border-color;
+          border-radius: 4px;
+
+          &--error {
+            color: variables.$color-warning;
+            border-color: variables.$color-warning;
+          }
+          &--ok {
+            color: variables.$color-success;
+            border-color: variables.$color-success;
+          }
+        }
+      }
+    }
+  }
+
+  .error-container {
+    display: flex;
+
+    align-items: center;
+    color: red;
+    gap: 8px;
+    span {
+      word-break: break-word;
+    }
+  }
+
+  .icon {
+    min-width: 24px;
+    min-height: 24px;
+    path {
+      stroke: variables.$font-color-secondary;
+    }
+  }
+  .exclamation-icon {
+    min-height: 24px;
+    path {
+      stroke: variables.$color-warning;
+    }
+  }
+}

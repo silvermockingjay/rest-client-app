@@ -1,0 +1,138 @@
+@use './base/reset';
+@use './base/variables';
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  min-height: 100vh;
+  max-width: 1440px;
+  font-family: variables.$font-family-base;
+  color: variables.$font-color-primary;
+  background-color: variables.$color-basic;
+  box-shadow: variables.$border-color 0 0 30px 0;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: variables.$font-weight-bold;
+  color: variables.$font-color-primary;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: variables.$font-weight-bold;
+  color: variables.$font-color-primary;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: variables.$font-weight-bold;
+  color: variables.$font-color-primary;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: variables.$font-color-primary;
+}
+
+.main {
+  flex-grow: 1;
+  width: 100%;
+}
+
+.table {
+  border-collapse: collapse;
+
+  .thead {
+    .td {
+      padding: 8px;
+      color: variables.$font-color-secondary;
+      font-weight: 600;
+    }
+  }
+
+  .td {
+    border: 1px solid variables.$border-color;
+  }
+
+  .custom-input {
+    height: 40px;
+    padding: 10px;
+  }
+
+  .custom-icon {
+    padding: 0 8px;
+  }
+}
+
+.textarea {
+  outline: none;
+}
+
+.link {
+  color: variables.$color-secondary;
+  padding-left: 5px;
+  transition: 0.3s ease;
+  position: relative;
+
+  &:after {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 0;
+    content: '';
+    height: 2px;
+    background-color: variables.$color-secondary-light;
+    transition: width 0.3s ease-out;
+  }
+
+  &:hover {
+    color: variables.$color-secondary-light;
+
+    &:after {
+      width: 100%;
+    }
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.method {
+  color: variables.$method-color-brawn;
+  border-color: variables.$method-color-brawn;
+
+  &--GET {
+    color: variables.$method-color-green;
+    border-color: variables.$method-color-green;
+  }
+  &--POST {
+    color: variables.$method-color-orange;
+    border-color: variables.$method-color-orange;
+  }
+  &--PUT {
+    color: variables.$method-color-blue;
+    border-color: variables.$method-color-blue;
+  }
+  &--PATCH {
+    color: variables.$method-color-purple;
+    border-color: variables.$method-color-purple;
+  }
+  &--HEAD {
+    color: variables.$method-color-green;
+    border-color: variables.$method-color-green;
+  }
+  &--OPTIONS {
+    color: variables.$method-color-purple;
+    border-color: variables.$method-color-purple;
+  }
+  &--DELETE {
+    color: variables.$method-color-red;
+    border-color: variables.$method-color-red;
+  }
+}

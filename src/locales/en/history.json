@@ -1,0 +1,10 @@
+{
+  "request": "Request",
+  "response": "Response",
+  "duration": "duration",
+  "ms": "ms",
+  "payload": "payload",
+  "suggestion": "You have not executed any requests yet. Try those options:",
+  "suggestionLink": "to the REST client",
+  "bytes": "bytes"
+}

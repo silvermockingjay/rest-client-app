@@ -1,0 +1,79 @@
+@use '@/styles/base/variables';
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  padding: 20px;
+  gap: 10px;
+  box-shadow: variables.$shadow;
+  border-radius: 8px;
+  width: 286px;
+}
+
+.card-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  gap: 10px;
+}
+
+.card-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  flex-grow: 1;
+  color: variables.$font-color-secondary;
+  font-size: variables.$font-size-sm;
+  font-weight: variables.$font-weight-regular;
+  line-height: 20px;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.card-role {
+  margin-top: 4px;
+  color: variables.$font-color-primary;
+  font-size: variables.$font-size-sm;
+  font-weight: variables.$font-weight-regular;
+  text-transform: uppercase;
+
+  &.lead {
+    color: variables.$color-primary;
+  }
+}
+
+.card-gh-logo {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+@media (max-width: 860px) {
+  .card-container {
+    width: 220px;
+  }
+}
+
+@media (max-width: 440px) {
+  .card-container {
+    width: 286px;
+  }
+}

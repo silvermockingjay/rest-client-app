@@ -1,0 +1,13 @@
+@use '@/styles/base/variables';
+
+.main.error {
+  background-color: variables.$bg-color-warning;
+}
+.main-fallback {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  gap: 24px;
+}

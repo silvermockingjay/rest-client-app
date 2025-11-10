@@ -1,0 +1,179 @@
+export type SupabaseAuthErrors =
+  | 'anonymous_provider_disabled'
+  | 'bad_code_verifier'
+  | 'bad_json'
+  | 'bad_jwt'
+  | 'bad_oauth_callback'
+  | 'bad_oauth_state'
+  | 'captcha_failed'
+  | 'conflict'
+  | 'email_address_invalid'
+  | 'email_address_not_authorized'
+  | 'email_conflict_identity_not_deletable'
+  | 'email_exists'
+  | 'email_not_confirmed'
+  | 'email_provider_disabled'
+  | 'flow_state_expired'
+  | 'flow_state_not_found'
+  | 'hook_payload_invalid_content_type'
+  | 'hook_payload_over_size_limit'
+  | 'hook_timeout'
+  | 'hook_timeout_after_retry'
+  | 'identity_already_exists'
+  | 'identity_not_found'
+  | 'insufficient_aal'
+  | 'invalid_credentials'
+  | 'invite_not_found'
+  | 'manual_linking_disabled'
+  | 'mfa_challenge_expired'
+  | 'mfa_factor_name_conflict'
+  | 'mfa_factor_not_found'
+  | 'mfa_ip_address_mismatch'
+  | 'mfa_phone_enroll_not_enabled'
+  | 'mfa_phone_verify_not_enabled'
+  | 'mfa_totp_enroll_not_enabled'
+  | 'mfa_totp_verify_not_enabled'
+  | 'mfa_verification_failed'
+  | 'mfa_verification_rejected'
+  | 'mfa_verified_factor_exists'
+  | 'mfa_web_authn_enroll_not_enabled'
+  | 'mfa_web_authn_verify_not_enabled'
+  | 'no_authorization'
+  | 'not_admin'
+  | 'oauth_provider_not_supported'
+  | 'otp_disabled'
+  | 'otp_expired'
+  | 'over_email_send_rate_limit'
+  | 'over_request_rate_limit'
+  | 'over_sms_send_rate_limit'
+  | 'phone_exists'
+  | 'phone_not_confirmed'
+  | 'phone_provider_disabled'
+  | 'provider_disabled'
+  | 'provider_email_needs_verification'
+  | 'reauthentication_needed'
+  | 'reauthentication_not_valid'
+  | 'refresh_token_already_used'
+  | 'refresh_token_not_found'
+  | 'request_timeout'
+  | 'same_password'
+  | 'saml_assertion_no_email'
+  | 'saml_assertion_no_user_id'
+  | 'saml_entity_id_mismatch'
+  | 'saml_idp_already_exists'
+  | 'saml_idp_not_found'
+  | 'saml_metadata_fetch_failed'
+  | 'saml_provider_disabled'
+  | 'saml_relay_state_expired'
+  | 'saml_relay_state_not_found'
+  | 'session_expired'
+  | 'session_not_found'
+  | 'signup_disabled'
+  | 'single_identity_not_deletable'
+  | 'sms_send_failed'
+  | 'sso_domain_already_exists'
+  | 'sso_provider_not_found'
+  | 'too_many_enrolled_mfa_factors'
+  | 'unexpected_audience'
+  | 'unexpected_failure'
+  | 'user_already_exists'
+  | 'user_banned'
+  | 'user_not_found'
+  | 'user_sso_managed'
+  | 'validation_failed'
+  | 'weak_password';
+
+export const authErrors: Record<SupabaseAuthErrors, string> = {
+  anonymous_provider_disabled: 'Please, put valid data to continue',
+  bad_code_verifier: 'Something went wrong with the login process. Please try again.',
+  bad_json: 'We couldn’t process your request. Please refresh and try again.',
+  bad_jwt: 'Your session expired. Please sign in again.',
+  bad_oauth_callback: 'Login with your provider didn’t work. Please try again.',
+  bad_oauth_state: 'Login session expired. Please try again.',
+  captcha_failed: 'CAPTCHA check failed. Please try again.',
+  conflict: 'Too many requests at once. Please wait a moment and retry.',
+  email_address_invalid: 'Email is invalid. Pls, try another one.',
+  email_address_not_authorized: 'We can’t send emails to this address. Try a different one.',
+  email_conflict_identity_not_deletable: 'Account issue detected. Please contact support.',
+  email_exists: 'An account with this email already exists.',
+  email_not_confirmed: 'Please verify your email',
+  email_provider_disabled: 'Please enter valid redentials',
+  flow_state_expired: 'Your login session expired. Please try again.',
+  flow_state_not_found: 'Login session ended. Please try again.',
+  hook_payload_invalid_content_type: 'Something went wrong on our side. Please try again later.',
+  hook_payload_over_size_limit: 'Request too large. Please try again.',
+  hook_timeout: 'Request timed out. Please try again later.',
+  hook_timeout_after_retry: 'Request took too long. Please try again.',
+  identity_already_exists: 'This account is already exists',
+  identity_not_found: 'We couldn’t find your account. Please try again',
+  insufficient_aal: 'Additional verification required. Please complete MFA.',
+  invalid_credentials: 'Incorrect email or password. Please try again.',
+  invite_not_found: 'This invitation is invalid or expired.',
+  manual_linking_disabled: 'Linking accounts isn’t available. Please contact support.',
+  mfa_challenge_expired: 'Your MFA code expired. Please request a new one.',
+  mfa_factor_name_conflict: 'MFA factor name already exists. Use a different name.',
+  mfa_factor_not_found: 'MFA factor not found. Please try again.',
+  mfa_ip_address_mismatch: 'MFA setup must be done on the same device.',
+  mfa_phone_enroll_not_enabled: 'Phone verification isn’t available right now.',
+  mfa_phone_verify_not_enabled: 'Phone verification isn’t available right now.',
+  mfa_totp_enroll_not_enabled: 'TOTP verification isn’t available right now.',
+  mfa_totp_verify_not_enabled: 'TOTP verification isn’t available right now.',
+  mfa_verification_failed: 'Wrong MFA code. Please try again.',
+  mfa_verification_rejected: 'MFA verification failed. Please contact support.',
+  mfa_verified_factor_exists: 'You already have an active MFA factor.',
+  mfa_web_authn_enroll_not_enabled: 'WebAuthn enrollment isn’t available.',
+  mfa_web_authn_verify_not_enabled: 'WebAuthn login isn’t available.',
+  no_authorization: 'Please sign in to continue.',
+  not_admin: 'You don’t have permission to do that.',
+  oauth_provider_not_supported: 'This login method isn’t supported right now.',
+  otp_disabled: 'Magic links and OTP logins are disabled.',
+  otp_expired: 'Your one-time code expired. Please request a new one.',
+  over_email_send_rate_limit: 'Too many requests. Please wait a moment before retrying.',
+  over_request_rate_limit: 'Too many attempts. Please slow down.',
+  over_sms_send_rate_limit: 'Too many SMS messages sent. Please wait a bit.',
+  phone_exists: 'This phone number is already linked to another account.',
+  phone_not_confirmed: 'Please verify your phone number before signing in.',
+  phone_provider_disabled: 'Phone sign-ups are disabled right now.',
+  provider_disabled: 'This sign-in method is disabled. Try another one.',
+  provider_email_needs_verification: 'Please verify your email before continuing.',
+  reauthentication_needed: 'Please sign in again to continue.',
+  reauthentication_not_valid: 'Reauthentication failed. Please try again.',
+  refresh_token_already_used: 'Your session expired. Please sign in again.',
+  refresh_token_not_found: 'Session not found. Please sign in again.',
+  request_timeout: 'Request took too long. Please try again.',
+  same_password: 'Your new password must be different from the old one.',
+  saml_assertion_no_email: 'Couldn’t find an email in your SSO account. Contact support.',
+  saml_assertion_no_user_id: 'Couldn’t find user ID in your SSO account. Contact support.',
+  saml_entity_id_mismatch: 'SSO configuration mismatch. Contact support.',
+  saml_idp_already_exists: 'This SSO provider is already set up.',
+  saml_idp_not_found: 'SSO provider not found.',
+  saml_metadata_fetch_failed: 'Failed to set up SSO. Contact support.',
+  saml_provider_disabled: 'SSO login is disabled. Contact support.',
+  saml_relay_state_expired: 'SSO session expired. Please try again.',
+  saml_relay_state_not_found: 'SSO session not found. Please try again.',
+  session_expired: 'Your session expired. Please sign in again.',
+  session_not_found: 'Session not found. Please sign in again.',
+  signup_disabled: 'Sign-ups are disabled right now. Please try again later.',
+  single_identity_not_deletable: 'This account can’t be removed. Please contact support.',
+  sms_send_failed: 'Couldn’t send SMS. Please try again.',
+  sso_domain_already_exists: 'This SSO domain is already registered.',
+  sso_provider_not_found: 'SSO provider not found. Contact support.',
+  too_many_enrolled_mfa_factors: 'You’ve added too many MFA factors. Remove one to continue.',
+  unexpected_audience: 'Unexpected error. Please try again.',
+  unexpected_failure: 'Something went wrong. Please try again later.',
+  user_already_exists: 'An account already exists with this info. Try signing in instead.',
+  user_banned: 'Your account is banned. Please contact support.',
+  user_not_found: 'We couldn’t find your account. Please sign up first.',
+  user_sso_managed: 'Your account is managed by SSO and can’t be changed here.',
+  validation_failed: 'Some details are invalid. Please check and try again.',
+  weak_password: 'Your password is too weak. Use at least 8 characters, numbers, and symbols.',
+};
+
+export function getSupabaseAuthError(code: string | undefined): string {
+  if (!code) return 'Something went wrong. Please try again.';
+
+  if (code in authErrors) {
+    return authErrors[code as SupabaseAuthErrors];
+  }
+  return 'Something went wrong. Please try again.';
+}

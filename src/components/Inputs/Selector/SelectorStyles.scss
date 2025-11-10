@@ -1,0 +1,27 @@
+@use '@/styles/base/variables';
+
+.selector-container {
+  display: flex;
+  align-items: baseline;
+  gap: variables.$spacing-sm;
+  font-family: variables.$font-family-base;
+  font-size: variables.$font-size-base;
+  font-style: variables.$font-style-normal;
+  font-weight: variables.$font-weight-regular;
+}
+
+.label:empty {
+  display: none;
+}
+
+.select {
+  height: 43px;
+  width: auto;
+  border: 1px solid variables.$border-color;
+  background-color: transparent;
+  border-radius: variables.$border-radius;
+  padding: variables.$spacing-sm;
+  color: variables.$font-color-primary;
+  cursor: pointer;
+  outline: none;
+}

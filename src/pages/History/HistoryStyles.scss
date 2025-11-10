@@ -1,0 +1,91 @@
+@use '@/styles/base/variables';
+
+.rest-suggestion {
+  margin-top: 40px;
+  display: flex;
+  justify-self: center;
+  color: variables.$font-color-secondary;
+
+  .suggestion-link {
+    color: variables.$color-secondary;
+  }
+  .suggestion-link:hover {
+    color: variables.$color-secondary-light;
+    text-decoration: underline;
+  }
+}
+
+.history-list {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+
+  list-style-type: none;
+  color: variables.$font-color-secondary;
+  font-size: variables.$font-size-base;
+
+  li {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+
+    cursor: pointer;
+
+    .closed-list-container {
+      display: flex;
+      align-self: center;
+      padding: 8px;
+      user-select: none;
+
+      .list-icon {
+        &--opened-list {
+          rotate: 90deg;
+        }
+      }
+    }
+
+    .closed-list-container:hover {
+      background-color: variables.$bg-color;
+    }
+  }
+  li:hover {
+    .opened-list-container {
+      box-shadow: variables.$shadow;
+    }
+  }
+
+  .opened-list-container {
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.3s ease;
+
+    .request-row {
+      padding: 8px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 12px;
+
+      .url-link {
+        color: variables.$font-color-primary;
+        transition: color 0.3s;
+      }
+      .url-link:hover {
+        color: variables.$color-secondary-light;
+        text-decoration: underline;
+      }
+
+      .icon-container {
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: color 0.3s;
+        &:hover {
+          color: variables.$color-primary;
+        }
+      }
+    }
+  }
+}

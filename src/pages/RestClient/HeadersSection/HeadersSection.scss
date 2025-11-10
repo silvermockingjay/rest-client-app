@@ -1,0 +1,28 @@
+@use '@/styles/base/variables';
+
+.headers-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  .content-container {
+    height: 250px;
+    overflow-y: auto;
+    border: 1px solid variables.$border-color;
+  }
+
+  .table {
+    width: 100%;
+  }
+
+  .thead {
+    .key,
+    .value {
+      width: 50%;
+    }
+  }
+
+  .button.icon-btn {
+    margin: 0 8px;
+  }
+}

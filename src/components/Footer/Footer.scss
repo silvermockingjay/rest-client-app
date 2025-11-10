@@ -1,0 +1,30 @@
+@use '@/styles/base/variables';
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: variables.$bg-color;
+  padding: 1rem 7rem;
+}
+
+.footer__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  width: 30%;
+
+  .logo img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.year {
+  font-family: variables.$font-family-base;
+  font-size: variables.$font-size-sm;
+  font-weight: variables.$font-weight-regular;
+  color: variables.$font-color-secondary;
+}

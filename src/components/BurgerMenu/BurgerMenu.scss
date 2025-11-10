@@ -1,0 +1,37 @@
+.burger-menu {
+  display: none;
+}
+
+@media (max-width: 860px) {
+  .burger-menu {
+    display: block;
+    position: relative;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.bar1,
+.bar2 {
+  position: absolute;
+  width: 24px;
+  height: 1px;
+  background-color: #000;
+  transition: ease 0.3s;
+}
+
+.bar1 {
+  top: 7px;
+}
+
+.bar2 {
+  top: 17px;
+}
+
+.bar1.open {
+  transform: translate(5px, 5px) rotate(90deg);
+}
+
+.bar2.open {
+  transform: translate(-5px, -5px) rotate(90deg);
+}

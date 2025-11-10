@@ -1,0 +1,11 @@
+{
+  "no-content": "Add your first variable",
+  "no-variables": "Here your variables will be displayed",
+  "title": "Variables",
+  "addBtn": "Add variable",
+  "saveBtn": "Save variable",
+  "key": "Key",
+  "value": "Value",
+  "emptyVariableError": "Variable name or value cannot be empty",
+  "duplicateVariableError": "Variable with this name already exists, choose another name"
+}

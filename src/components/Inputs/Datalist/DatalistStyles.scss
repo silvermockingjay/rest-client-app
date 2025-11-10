@@ -1,0 +1,44 @@
+@use '@/styles/base/variables';
+
+.datalist-container {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  font-family: variables.$font-family-base;
+  font-size: variables.$font-size-base;
+  font-style: variables.$font-style-normal;
+  font-weight: variables.$font-weight-regular;
+}
+
+.datalist-label:empty {
+  display: none;
+}
+
+.datalist-label {
+  margin-bottom: variables.$spacing-sm;
+}
+
+.datalist-input {
+  height: 43px;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  border-radius: variables.$border-radius;
+  padding: variables.$spacing-sm;
+  color: variables.$font-color-primary;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s;
+
+  &.border {
+    border: 1px solid variables.$border-color;
+  }
+}
+
+.datalist-input::placeholder {
+  color: variables.$input-placeholder-color;
+}
+
+.datalist-input:focus {
+  border-color: variables.$color-basic-dark;
+}

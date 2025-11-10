@@ -1,0 +1,15 @@
+{
+  "method": "Method",
+  "endpoint": "Endpoint URL",
+  "send": "Send",
+  "headers": "Headers",
+  "key": "Key",
+  "value": "Value",
+  "body": "Body",
+  "response": "Response details",
+  "requestError": "Request failed with status code {{code}}",
+  "formatError": "Not valid format",
+  "requiredField": "Required field",
+  "code": "Code",
+  "beautifyBtn": "Beautify"
+}

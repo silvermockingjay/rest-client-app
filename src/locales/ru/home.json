@@ -1,0 +1,34 @@
+{
+  "welcomeUser": "С возвращением, {{user}}!",
+  "userNameFallback": "дорогой пользователь",
+  "welcomeGuest": "Добро пожаловать!",
+  "aboutApp": "Приложение Rest Client — это современный инструмент для тестирования и совместной работы с API, созданный для того, чтобы работа с REST API была быстрее и проще. Вы можете отправлять запросы, просматривать ответы и хранить историю в одном месте. Независимо от того, отлаживаете ли вы, исследуете или документируете API, наше приложение поможет сделать это эффективно.",
+  "aboutCourse": "Приложение Rest Client создано как итоговое задание курса <courseLink>{{courseName}}</courseLink>",
+  "team": [
+    {
+      "id": 0,
+      "image": "https://avatars.githubusercontent.com/u/148607879?v=4",
+      "name": "Евгений Ригус",
+      "role": "тимлид",
+      "description": "Фронтенд разработчик, владеющий JavaScript, TypeScript и React, с интересом к современным фреймворкам и DevOps. Ранее работал аналитиком данных.",
+      "gh": "https://github.com/ryhus"
+    },
+    {
+      "id": 1,
+      "image": "https://avatars.githubusercontent.com/u/95028871?v=4",
+      "name": "Мария Паринова",
+      "role": "фронтенд разработчик",
+      "description": "Фронтенд разработчик с опытом создания адаптивных сайтов и SPA на React. Владеет JavaScript, TypeScript, React и практиками UI/UX.",
+      "gh": "https://github.com/mariaparinova"
+    },
+    {
+      "id": 2,
+      "image": "https://avatars.githubusercontent.com/u/141926915?s=400&u=c909ba71384002c4b9e7ca184bddb4a2e4c4a7c7&v=4",
+      "name": "Анастасия Кудревич",
+      "role": "фронтенд разработчик",
+      "description": "Фронтенд разработчик, владеющий JavaScript, TypeScript и React. После 6 лет работы на лидерских позициях в ритейле перешла в IT.",
+      "gh": "https://github.com/silvermockingjay"
+    }
+  ],
+  "primaryRole": "тимлид"
+}

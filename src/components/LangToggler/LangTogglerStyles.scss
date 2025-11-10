@@ -1,0 +1,31 @@
+@use '@/styles/base/variables';
+
+.lang-toggler {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+
+  &__group {
+    display: flex;
+    align-items: baseline;
+    gap: 2px;
+  }
+
+  &__button {
+    min-width: 32px;
+    font-size: variables.$font-size-base;
+    font-weight: variables.$font-weight-medium;
+    color: variables.$font-color-primary;
+    background-color: transparent;
+    border: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:disabled {
+      color: variables.$color-disabled;
+      cursor: default;
+    }
+  }
+}

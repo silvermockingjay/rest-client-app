@@ -1,0 +1,16 @@
+{
+  "name": {
+    "required": "Введите имя"
+  },
+  "email": {
+    "required": "Введите email",
+    "format": "Формат email: username@example.com"
+  },
+  "password": {
+    "required": "Введите пароль",
+    "matchesLetter": "Пароль должен содержать хотя бы одну букву",
+    "matchesNumber": "Пароль должен содержать хотя бы одну цифру",
+    "matchesLength": "Пароль должен содержать не менее 8 символов",
+    "matchesSpecial": "Пароль должен содержать специальный символ"
+  }
+}

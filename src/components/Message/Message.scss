@@ -1,0 +1,21 @@
+@use '@/styles/base/variables';
+
+.message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 59px;
+  padding: 10px;
+  text-align: center;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  border-radius: variables.$border-radius;
+
+  &--success {
+    background-color: variables.$color-success;
+    font-size: variables.$font-size-sm;
+  }
+  &--warning {
+    background-color: variables.$bg-color-warning;
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": {
+    "required": "Name is required"
+  },
+  "email": {
+    "required": "Email is required",
+    "format": "Expected email format: username@example.com"
+  },
+  "password": {
+    "required": "Password is required",
+    "matchesLetter": "Password must contain at least one letter",
+    "matchesNumber": "Password must contain at least one number",
+    "matchesLength": "Password must be at least 8 characters",
+    "matchesSpecial": "Special symbol is required"
+  }
+}

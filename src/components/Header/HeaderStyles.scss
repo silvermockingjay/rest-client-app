@@ -1,0 +1,135 @@
+@use '@/styles/base/variables';
+@use '@/components/Button/ButtonStyles';
+
+.header {
+  display: flex;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: variables.$color-basic;
+  border-bottom: 0.1rem solid variables.$border-color;
+  padding: 1rem 5rem;
+  transition: 0.3s ease;
+  
+  &__content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 3rem;
+
+    .app-logo {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+    width: 90%;
+
+    .navbar {
+      display: flex;
+      justify-content: flex-end;
+      gap: 3rem;
+      width: 90%;
+
+      &__actions {
+        display: flex;
+        justify-content: flex-end;
+        align-items: baseline;
+        width: 100%;
+
+        &:has(.navbar__actions--expanded-group) {
+          justify-content: space-between;
+        }
+
+        &--expanded-group,
+        &--basic-group {
+          display: flex;
+          gap: 1.7rem;
+        }
+      }
+
+      &__link {
+        font-size: variables.$font-size-base;
+        font-weight: variables.$font-weight-medium;
+        color: variables.$color-secondary;
+        transition: 0.3s ease;
+        position: relative;
+
+        &:hover,
+        &.active {
+          color: variables.$color-secondary-light;
+        }
+      }
+    }
+  }
+}
+
+.app-logo {
+  width: 48px;
+  height: 48px;
+}
+
+.scrolled {
+  background-color: variables.$bg-color;
+}
+
+@media (max-width: 860px) {
+  .header__content {
+    position: relative;
+    justify-content: space-between;
+  }
+
+  .header__menu {
+    display: none;
+  }
+
+  body:has(.header__menu.slider) {
+    main {
+      position: fixed;
+    }
+  }
+
+  .header__menu.slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+    padding: 12px 24px;
+    position: absolute;
+    top: calc(100% + 1rem);
+    left: -5rem;
+    background-color: variables.$color-basic;
+    border-top: solid 1px variables.$border-color;
+    width: 100vw;
+    height: calc(100vh - 77px);
+
+    .navbar,
+    .navbar__actions,
+    .navbar__actions--expanded-group {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .navbar__actions {
+      gap: 2rem;
+    }
+  }
+}
+
+@media (max-width: 440px) {
+  .header {
+    padding: 1rem 0.5rem;
+
+    .header__menu.slider {
+      left: -0.5rem;
+    }
+  }
+}

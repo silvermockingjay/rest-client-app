@@ -1,0 +1,70 @@
+@use '@/styles/base/variables';
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: variables.$spacing-md;
+  font-family: variables.$font-family-base;
+  font-size: variables.$font-size-base;
+  font-style: variables.$font-style-normal;
+  font-weight: variables.$font-weight-regular;
+}
+
+.checkbox-label:empty {
+  display: none;
+}
+
+.checkbox-label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  padding-left: 35px;
+  margin-bottom: 12px;
+}
+
+.checkbox-input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: variables.$color-basic;
+  border-radius: 1px;
+  border: 1px solid variables.$color-basic-dark;
+}
+
+.checkbox-label:hover .checkbox-input ~ .checkmark {
+  background-color: variables.$input-color;
+}
+
+.checkbox-label .checkbox-input:checked ~ .checkmark {
+  background-color: variables.$color-basic-dark;
+}
+
+.checkmark::after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.checkbox-label .checkbox-input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox-label .checkmark::after {
+  left: 8px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid variables.$color-basic;
+  border-width: 0 3px 3px 0;
+  transform: translate(-50%, -50%) rotate(45deg);
+}

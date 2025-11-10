@@ -1,0 +1,77 @@
+@use '@/styles/base/variables';
+
+.variables__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem 5rem;
+  font-size: variables.$font-size-base;
+  font-weight: variables.$font-weight-regular;
+  color: variables.$font-color-primary;
+}
+
+.variables__no-content {
+  color: variables.$font-color-secondary;
+}
+
+.variables__actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.variables__content {
+  height: 250px;
+  overflow-y: auto;
+  border: 1px solid variables.$border-color;
+  width: 100%;
+
+  &:has(.variables__placeholder) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.variables-error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+}
+
+.variables-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .table {
+    width: 100%;
+  }
+
+  .thead {
+    .key,
+    .value {
+      width: 50%;
+    }
+  }
+
+  .button.icon-btn {
+    margin: 0 8px;
+  }
+}
+
+@media (max-width: 860px) {
+  .variables__container {
+    padding: 2rem 2.5rem;
+  }
+}
+
+@media (max-width: 440px) {
+  .variables__container {
+    padding: 1.5rem 0.5rem;
+  }
+}
+
+

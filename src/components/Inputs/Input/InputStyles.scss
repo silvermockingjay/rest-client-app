@@ -1,0 +1,74 @@
+@use '@/styles/base/variables';
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  font-family: variables.$font-family-base;
+  font-size: variables.$font-size-base;
+  font-style: variables.$font-style-normal;
+  font-weight: variables.$font-weight-regular;
+  width: 100%;
+}
+
+.input-label {
+  padding: 0 8px;
+  color: variables.$input-color;
+  font-weight: variables.$font-weight-medium;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  padding: 12px;
+  gap: variables.$spacing-sm;
+  border: none;
+  border-radius: variables.$border-radius;
+  background-color: variables.$color-basic;
+  cursor: text;
+  outline: none;
+  transition: border-color 0.2s;
+
+  &.border {
+    border: 1px solid variables.$border-color;
+  }
+}
+
+.input-field:focus {
+  border-color: variables.$color-basic-dark;
+}
+
+.input-field:disabled {
+  background-color: variables.$input-disabled-color;
+  cursor: none;
+  pointer-events: none;
+}
+
+.input-field--error {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 8px;
+  width: 100%;
+  min-height: 18px;
+  color: variables.$color-warning;
+  font-size: variables.$font-size-sm;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+.input-right-icon {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+}
+
+.input-field::placeholder {
+  color: variables.$input-placeholder-color;
+}

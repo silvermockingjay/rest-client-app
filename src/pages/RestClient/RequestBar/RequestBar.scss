@@ -1,0 +1,16 @@
+.request-bar {
+  display: flex;
+  gap: 4px;
+
+  .input-container-search {
+    flex-grow: 1;
+  }
+
+  .input-search {
+    width: 100%;
+  }
+
+  .input-field--error {
+    width: 100%;
+  }
+}

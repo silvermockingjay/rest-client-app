@@ -1,0 +1,23 @@
+@use '@/styles/base/variables';
+
+.rest-client-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: auto;
+  padding: 40px;
+  max-width: 1000px;
+
+  .bg-overlay {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: variables.$bg-color-overlay;
+  }
+}

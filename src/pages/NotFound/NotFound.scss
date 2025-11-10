@@ -1,0 +1,94 @@
+@use '@/styles/base/variables';
+@use '@/components/Button/ButtonStyles.scss';
+
+.not-found {
+  &__container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 850px;
+    height: 650px;
+    padding: 7rem 2rem;
+    margin: auto;
+    color: variables.$font-color-primary;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    position: absolute;
+    top: 210px;
+  }
+
+  &__tittle {
+    font-size: variables.$font-size-lg;
+    font-weight: variables.$font-weight-bold;
+  }
+
+  &__info {
+    font-size: variables.$font-size-base;
+    font-weight: variables.$font-weight-regular;
+  }
+}
+
+.figure-1 {
+  width: 240px;
+  height: 100px;
+  position: absolute;
+  left: 67.5%;
+  right: 2.5%;
+  top: 8.33%;
+  bottom: 75%;
+  background: variables.$color-primary;
+  opacity: 0.12;
+  border-radius: 50%;
+}
+
+.figure-2 {
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  left: 60.12%;
+  right: 36.38%;
+  top: 25%;
+  bottom: 68%;
+  background: variables.$color-primary;
+  opacity: 0.95;
+  border-radius: 50%;
+}
+
+.figure-3 {
+  width: 380px;
+  height: 160px;
+  position: absolute;
+  left: 0;
+  right: 50%;
+  top: 48.47%;
+  bottom: 24.86%;
+  background: variables.$color-secondary;
+  opacity: 0.08;
+  border-radius: 50%;
+}
+
+.figure-4 {
+  width: 600px;
+  height: 1px;
+  position: absolute;
+  left: 12.5%;
+  right: 12.5%;
+  top: 58%;
+  bottom: 43.17%;
+  background: variables.$border-color;
+  border-radius: 50%;
+}
+
+.figure-5 {
+  position: absolute;
+  left: 13.75%;
+  right: 79%;
+  top: 44.83%;
+  bottom: 51.17%;
+}
